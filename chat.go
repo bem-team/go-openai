@@ -180,6 +180,8 @@ const (
 
 type ChatCompletionResponseFormat struct {
 	Type ChatCompletionResponseFormatType `json:"type,omitempty"`
+	// IMPORTANT: this is only supported by the Together API in their flavor of "JSON mode"
+	Schema json.RawMessage `json:"schema,omitempty"`
 }
 
 // ChatCompletionRequest represents a request structure for chat completion API.
